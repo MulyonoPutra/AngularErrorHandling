@@ -1,0 +1,29 @@
+<h2>
+  Demo Api Errors Handling Angular
+</h2>
+
+<br />
+resolved in component no matter what
+<br />
+<button (click)="success200()">try 200 with data</button><br /><br />
+<button (click)="error200()">try 200 with error/warning</button><br /><br />
+<button (click)="errorHttp404()">try 404 http error (wait 1 min)</button><br /><br />
+<button (click)="errorTimeout()">try timeout error (2sec wait)</button>
+<br />
+<br />
+redirected to error page in interceptor
+<br />
+<button (click)="errorHttp40XAAnd50X()">try 40x | 50x http error except 404</button>
+
+
+<br />
+<br />
+<br />
+
+<div *ngIf="data" style="color: green; font-size: 34px;">
+this is the component data on Success: {{ data }}
+</div>
+
+<div *ngIf="error" style="color: red; font-size: 34px;">
+{{ error }}
+</div>
